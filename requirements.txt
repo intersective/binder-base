@@ -17,5 +17,4 @@ seaborn==0.10.1
 six==1.15.0               # via cycler, python-dateutil
 scikit-learn
 openpyxl
-scikit-learn
 nbgitpuller
