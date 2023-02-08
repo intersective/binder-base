@@ -1,12 +1,17 @@
 # Python environment with a requirements.txt
 
-[![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/intersective/DS_example2/trunk)
+[![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/intersective/binder-base/trunk)
 
 A Binder-compatible repo with a `requirements.txt` file.
 
 Access this Binder at the following URL
 
-http://mybinder.org/v2/gh/intersective/DS_example2/trunk
+http://mybinder.org/v2/gh/intersective/binder-base/trunk
+
+Note this binder is designed to be used as a base with nbgitpuller to bring in specific workfiles for different
+use cases. Here's an example of a binder launch into a EDA micro capstone environment:
+
+https://mybinder.org/v2/gh/intersective/binder-base/master?urlpath=git-pull?repo=https:%2F%2Fgithub.com%2Fintersective%2Fmcap-ds-eda
 
 ## Notes
 The `requirements.txt` file should list all Python libraries that your notebooks
