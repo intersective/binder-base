@@ -3,6 +3,7 @@ on: [push] # You may want to trigger this Action on other things than a push.
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: production
     steps:
     - name: checkout files in repo
       uses: actions/checkout@master
@@ -13,6 +14,7 @@ jobs:
       with:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        MYBINDERORG_TAG: ${{ github.event.ref }}
         BINDER_CACHE: true
         PUBLIC_REGISTRY_CHECK: true
 
