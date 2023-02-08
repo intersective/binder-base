@@ -4,3 +4,4 @@ seaborn==0.10.1
 pandas
 scikit-learn
 openpyxl
+nbgitpuller
