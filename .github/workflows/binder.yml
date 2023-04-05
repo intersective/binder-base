@@ -8,14 +8,15 @@ jobs:
     - name: checkout files in repo
       uses: actions/checkout@master
       with:
-        persist-credentials: false
+        # persist-credentials: false
         ref: ${{ github.event.pull_request.head.sha }}
     - name: update jupyter dependencies with repo2docker
-      uses: jupyterhub/repo2docker-action@master
+      uses: intersective/repo2docker-action@master
       with:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         MYBINDERORG_TAG: ${{ github.event.ref }}
         PUBLIC_REGISTRY_CHECK: true
         BINDER_CACHE: true
+        APPENDIX_FILE: binder/Dockerfile.append
 
